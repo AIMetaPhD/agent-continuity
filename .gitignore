@@ -1,0 +1,19 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest-tmp/
+.pytest_cache/
+.debug-sync/
+.DS_Store
+*.log
+.latest-home*/
+.latest-pid
+.latest-server.log
+.jobid*
+claude-job*.json
+codex-job*.json
+.codex-job.json
+.claude/
+# Internal QA evidence and publish notes stay out of the public repository.
+qa/
+publish/

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent Continuity</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">AC</span>
+      <span>Agent Continuity</span>
+      <span class="version" id="app-version">v0.1.0</span>
+    </div>
+    <div class="topbar-right">
+      <span id="device-label" class="muted"></span>
+      <span id="sync-pill" class="pill">local</span>
+      <button class="btn ghost small" id="btn-refresh">刷新</button>
+    </div>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="project-picker">
+        <label class="label" for="project-select">项目</label>
+        <select id="project-select"></select>
+        <div class="row gap">
+          <button class="btn small" id="btn-new-project">新建 / 加入</button>
+        </div>
+      </div>
+      <nav class="tabs" id="tabs">
+        <button data-tab="overview" class="tab active">概览</button>
+        <button data-tab="definitions" class="tab">Agent 版本</button>
+        <button data-tab="memory" class="tab">记忆</button>
+        <button data-tab="handoff" class="tab">接续</button>
+        <button data-tab="devices" class="tab">设备与同步</button>
+        <button data-tab="settings" class="tab">设置</button>
+      </nav>
+      <div class="sidebar-foot">
+        <div>本地回环 · 数据在 <code id="home-path">~/.agent-continuity</code></div>
+      </div>
+    </aside>
+
+    <main id="content" class="content">
+      <div class="empty">正在加载…</div>
+    </main>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-card" id="modal-card"></div>
+  </div>
+  <div id="toast" class="toast hidden"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

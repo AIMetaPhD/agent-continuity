@@ -1,0 +1,6 @@
+# Shell entrypoints must remain LF so bash does not see `set: invalid option`.
+scripts/start_linux.sh text eol=lf
+scripts/start_macos.command text eol=lf
+# Windows entrypoints are kept CRLF for cmd.exe / PowerShell.
+scripts/start_windows.bat text eol=crlf
+scripts/start_windows.ps1 text eol=lf
